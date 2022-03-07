@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.taway.jfxdraw.MainController">
+   <center>
+      <ScrollPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <content>
+          <AnchorPane fx:id="DrawingPane" minHeight="0.0" minWidth="0.0" onMouseClicked="#DrawPaneMouseClicked" onMouseDragged="#DrawPaneMouseDrag" onMouseMoved="#DrawPaneMouseMove" prefHeight="1080.0" prefWidth="1920.0" />
+        </content>
+      </ScrollPane>
+   </center>
+   <bottom>
+      <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <items>
+            <Text fx:id="TextCoordinates" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="79.13671875" />
+            <ColorPicker fx:id="ColorPickerPrimary">
+               <value>
+                  <Color />
+               </value>
+            </ColorPicker>
+            <ColorPicker fx:id="ColorPickerSecondary">
+               <value>
+                  <Color opacity="0.0" />
+               </value>
+            </ColorPicker>
+            <Button mnemonicParsing="false" onAction="#ToolBarButtonClicked" text="Hand" />
+            <Button mnemonicParsing="false" onAction="#ToolBarButtonClicked" text="Pencil" />
+            <Button mnemonicParsing="false" onAction="#ToolBarButtonClicked" text="Line" />
+            <Button mnemonicParsing="false" onAction="#ToolBarButtonClicked" text="Circle" />
+         </items>
+      </ToolBar>
+   </bottom>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>
